@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+/* font-family: 'Montserrat', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #222;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+.wrapper {
+  width: 1280px;
+  margin: 50px auto;
+}
+
+header {
+  position: relative;
+}
+
+header .logo {
+  font-weight: 600;
+  font-style: 20px;
+}
+
+header ul.nav {
+  float: right;
+  list-style: none;
+  transition: opacity 500ms ease;
+}
+
+header ul.nav li {
+  display: inline;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+header ul.nav li:hover {
+  opacity: 0.5;
+}
+
+header .shop_cart_button {
+  float: right;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+header .shop_cart_button:hover, 
+header .shop_cart_button.active {
+  color: #d91b1b;
+  transform: scale(1.5);
+}
+
+header .shop_cart {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 30%;
+  background: #fafafa;
+  z-index: 100;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+header .shop_cart {
+  -webkit-box-shadow: 7px 13px 21px -3px rgba(126, 128, 129, 0.27);
+  -moz-box-shadow: 7px 13px 21px -3px rgba(126, 128, 129, 0.27);
+  box-shadow: 7px 13px 21px -3px rgba(126, 128, 129, 0.27);
+}
+
+header .shop_cart .empty h2 {
+  font-style: 20px;
+  margin-bottom: 20px;
+}
+
+header .shop_cart .item {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+header .shop_cart .item img {
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+  
+}
+
+header .shop_cart .item h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+header .shop_cart .item p {
+  color: #e31d1d;
+  font-weight: 600;
+}
+
+header .shop_cart .item .delete_order {
+  color: #d91b1b;
+  float: right;
+  position: relative;
+  top: -30px;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+header .shop_cart .item .delete_order:hover {
+  color: #e31d1d;
+  transform: scale(1.5);
+}
+
+header .shop_cart .sum {
+  float: left;
+  widows: 100%;
+  font-weight: 600 ;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+header .presentation {
+  margin: 50px 0;
+  background: url('./img/bg.jpg') no-repeat;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+  background-color: #bcaeae;
+  position: relative;
+}
+
+header .presentation::after {
+  content: "Лучшие товары для вашего дома";
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 25%;
+  font-size: 40px;
+  font-weight: 600;
+  color: antiquewhite;
+}
+
+header .presentation::before {
+  content: "по низким ценам";
+  position: absolute;
+  top: 260px;
+  left: 50px;
+  width: 25%;
+  font-size: 20px;
+  font-weight: 300;
+  color: antiquewhite;
+}
+
+.categories div{
+  display: inline-block;
+  background: #f2f2f2;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 500ms ease;
+}
+
+.categories div:hover {
+  border-color: #bcaeae;
+  transform: scale(1.15);
+}
+
+main {
+  display: flex;
+  widows: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main .item {
+  width: 30%;
+  margin-bottom: 50px;
+  background: #f3f3f3;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+main .item img,
+.full_item img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  transition: transform 500ms ease;
+  cursor: pointer;
+}
+
+main .item img:hover,
+.full_item img:hover  {
+  transform: scale(1.06);
+}
+
+main h2, main p, main b,
+.full_item h2, .full_item p, .full_item b {
+  margin: 10px 20px;
+  color: #333;
+}
+
+main b, 
+.full_item b {
+  color:#c96e6e;
+}
+
+main .add_to_cart,
+.full_item .add_to_cart {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  background: #bf4545;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 22px;
+  transition: transform 500ms ease;
+}
+
+main .add_to_cart:hover,
+.full_item .add_to_cart:hover {
+  transform: scale(1.4) translateY(-5px);
+}
+
+.full_item {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #00000065;
+  z-index: 1000;
+  overflow: auto;
+}
+
+.full_item > div {
+  width: 600px;
+  position: relative;
+  margin: 10% auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
+}
